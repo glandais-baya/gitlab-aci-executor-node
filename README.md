@@ -1,0 +1,1 @@
+gitlab-aci-executor-node
