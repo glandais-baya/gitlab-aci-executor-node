@@ -9,6 +9,7 @@ RUN apt-get update && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash && \
     curl -sL https://aka.ms/InstallAzureCLIDeb | bash && \
     wget --no-check-certificate -qO - https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_20.04/Release.key | apt-key add - && \
+    echo 'deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_20.04/ /' > /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list && \
     apt-get update && \
     apt-get -y install gitlab-runner buildah nodejs && \
     apt-get upgrade && \
